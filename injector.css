@@ -1,0 +1,42 @@
+.batch-delete-button {
+  position: absolute !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50px;
+  padding: 16px;
+  color: var(--fgColor-default, var(--color-fg-default)) !important;
+  transform: translate3d(0px, -50%, 0px) translate3d(0, -12px, 0);
+  z-index: 1;
+}
+.batch-delete-button:hover {
+  color: var(--fgColor-accent, var(--color-accent-fg)) !important
+}
+
+.batch-delete-loading {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+}
+
+.batch-delete-loading circle {
+  fill: transparent;
+  stroke-width: 20px;
+  stroke-dasharray: 314px;
+}
+
+.batch-delete-loading circle.background {
+  stroke: var(--color-accent-subtle);
+  stroke-dashoffset: 0;
+}
+
+.batch-delete-loading circle.fill {
+  stroke: var(--color-accent-fg);
+  stroke-dashoffset: 314px;
+  transition: stroke-dashoffset .2s cubic-bezier(0.71, 0.68, 0.15, 1.93);
+}
+
+.batch-delete-hide {
+  display: none;
+}
